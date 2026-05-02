@@ -56,3 +56,22 @@ button:last-of-type {
   margin-top: 20px;
   font-weight: bold;
 }
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: #ffffff;
+}
+body.dark .card {
+  background: #1e1e1e;
+  box-shadow: 0 0 10px
+rgba(255,255,255,0.1);
+}
+body.dark input {
+  background: #2c2c2c;
+  color: white;
+  border: 1px solid #555;
+}
+body.dark button {
+  opacity: 0.9;
+}
