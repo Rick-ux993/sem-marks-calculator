@@ -32,6 +32,11 @@ function calculateYear() {
 
   let totalSubjects = oddSub + evenSub;
 
+  if (totalSubject === 0) {
+    alert("Subjects cannot be zero");
+    return;
+  }
+  
   let rawYGPA = ((oddSGPA * oddSub) + (evenSGPA * evenSub)) / totalSubjects;
   
   let ygpa = parseFloat(rawYGPA.toFixed(2));
