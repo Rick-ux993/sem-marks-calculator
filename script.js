@@ -43,9 +43,10 @@ function calculateYear() {
   
   let totalMarks = totalSubjects * 100;
 
-  let obtainedMarks = (ygpa * totalMarks) / 10;
-
   let percentage = (ygpa - 0.75) * 10;
+
+  let obtainedMarks = (percentage / 100) * totalMarks;
+  
 
   document.getElementById("ygpa").innerText = ygpa.toFixed(2);
   document.getElementById("totalMarks").innerText = totalMarks;
