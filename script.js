@@ -34,7 +34,7 @@ function calculateYear() {
 
   let rawYGPA = ((oddSGPA * oddSub) + (evenSGPA * evenSub)) / totalSubjects;
   
-  let ygpa = parseFloat(rawYGPA.tofixed(2));
+  let ygpa = parseFloat(rawYGPA.toFixed(2));
   
   let totalMarks = totalSubjects * 100;
 
