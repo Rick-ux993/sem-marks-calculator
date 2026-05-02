@@ -65,3 +65,18 @@ function resetYear() {
   document.getElementById("obtainedMarks").innerText = "";
   document.getElementById("overallPercent").innerText = "";
 }
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+  let isDark = 
+  document.body.claslist.contains("dark");
+  localstorage.setItem("theme",isDark);
+
+document.getElementById("themeBtn").innerText = 
+isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+}
+window.onload = function () {
+  if (localstorage.getItem("theme") === "true") {
+document.body.classlist.add("dark");
+document.grtElementById("themeBtn").innerText = "☀️ Light Mode";
+  }
+};
