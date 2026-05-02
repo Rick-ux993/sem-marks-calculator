@@ -13,6 +13,14 @@
 <h1>MAKAUT CGPA-SGPA-YGPA to Percentage Converter</h1>
 
 <div class="card">
+  <h2>Grade Prediction</h2>
+  <input type="number"
+  id="targetPercent" placeholder="Enter Target Percentage">
+  <button
+  onclick="predictionGrade()">Predict</button>
+  <p>Required SGPA: <span id="reqSGPA"></span></p>
+  <p>Expected Grade: <span id="grade"></span></p>
+</div>
   <h2>Percentage ⇄ Grade Points</h2>
 
   <input type="number" id="sgpa" placeholder="Enter SGPA/YGPA">
