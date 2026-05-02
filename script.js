@@ -80,3 +80,52 @@ document.body.classlist.add("dark");
 document.grtElementById("themeBtn").innerText = "☀️ Light Mode";
   }
 };
+function predictGrade() {
+  let percent = parseFloat(document.getElementById("targetPercent").value);
+
+  if (isNaN(percent)) {
+    alert("Enter valid percentage");
+    return;
+  }
+  
+  let sgpa = (percent / 10) + 0.75;
+  document.getElementById("reqSGPA").innerText = sgpa.toFixed(2);
+
+  let grade = "";
+  let points = "";
+
+  if (percent >= 90 && percent <= 100) {
+    grade = "O (Outstanding)";
+    points = 10;
+  } 
+  else if (percent >= 80 && percent < 90) {
+    grade = "E (Excellent)";
+    points = 9;
+  } 
+  else if (percent >= 70 && percent < 80) {
+    grade = "A (Very Good)";
+    points = 8;
+  } 
+  else if (percent >= 60 && percent < 70) {
+    grade = "B (Good)";
+    points = 7;
+  } 
+  else if (percent >= 50 && percent < 60) {
+    grade = "C (Fair)";
+    points = 6;
+  } 
+  else if (percent >= 40 && percent < 50) {
+    grade = "D (Below Average)";
+    points = 5;
+  } 
+  else if (percent < 40 && percent >= 0) {
+    grade = "F (Failed)";
+    points = 2;
+  } 
+  else {
+    grade = "Invalid Input";
+    points = "-";
+  }
+
+  document.getElementById("grade").innerText = grade;
+      }
