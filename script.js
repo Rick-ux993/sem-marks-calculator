@@ -32,7 +32,7 @@ function calculateYear() {
 
   let totalSubjects = oddSub + evenSub;
 
-  if (totalSubject === 0) {
+  if (totalSubjects === 0) {
     alert("Subjects cannot be zero");
     return;
   }
