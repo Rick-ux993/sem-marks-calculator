@@ -1,0 +1,58 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:first-of-type {
+  background: green;
+  color: white;
+}
+
+button:last-of-type {
+  background: red;
+  color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row div {
+  width: 45%;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+}

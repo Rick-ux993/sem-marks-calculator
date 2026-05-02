@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MAKAUT SGPA Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>MAKAUT CGPA-SGPA-YGPA to Percentage Converter</h1>
+
+<div class="card">
+  <h2>Percentage ⇄ Grade Points</h2>
+
+  <input type="number" id="sgpa" placeholder="Enter SGPA/YGPA">
+
+  <p>Your SGPA/YGPA:</p>
+
+  <button onclick="convertSGPA()">Calculate</button>
+  <button onclick="resetSGPA()">Reset</button>
+
+  <p>Your Percentage (%):</p>
+  <input type="text" id="percentage" readonly>
+</div>
+
+
+<div class="card">
+  <h2>Yearly Marks Calculator</h2>
+
+  <div class="row">
+    <div>
+      <label>Odd Sem SGPA:</label>
+      <input type="number" id="oddSGPA">
+    </div>
+
+    <div>
+      <label>Even Sem SGPA:</label>
+      <input type="number" id="evenSGPA">
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label>No of Subjects (Odd):</label>
+      <input type="number" id="oddSub">
+    </div>
+
+    <div>
+      <label>No of Subjects (Even):</label>
+      <input type="number" id="evenSub">
+    </div>
+  </div>
+
+  <button onclick="calculateYear()">Calculate</button>
+  <button onclick="resetYear()">Reset</button>
+
+  <div class="result">
+    <p>YGPA: <span id="ygpa"></span></p>
+    <p>Total Marks: <span id="totalMarks"></span></p>
+    <p>Obtained Marks: <span id="obtainedMarks"></span></p>
+    <p>Overall Percentage: <span id="overallPercent"></span></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
