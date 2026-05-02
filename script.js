@@ -22,8 +22,8 @@ function resetSGPA() {
 function calculateYear() {
   let oddSGPA = parseFloat(document.getElementById("oddSGPA").value);
   let evenSGPA = parseFloat(document.getElementById("evenSGPA").value);
-  let oddSub = parseInt(document.getElementById("oddSub").value);
-  let evenSub = parseInt(document.getElementById("evenSub").value);
+  let oddSub = Number(document.getElementById("oddSub").value);
+  let evenSub = Number(document.getElementById("evenSub").value);
 
   if (isNaN(oddSGPA) || isNaN(evenSGPA) || isNaN(oddSub) || isNaN(evenSub)) {
     alert("Fill all fields properly");
@@ -32,8 +32,10 @@ function calculateYear() {
 
   let totalSubjects = oddSub + evenSub;
 
-  let ygpa = ((oddSGPA * oddSub) + (evenSGPA * evenSub)) / totalSubjects;
-
+  let rawYGPA = ((oddSGPA * oddSub) + (evenSGPA * evenSub)) / totalSubjects;
+  
+  let ygpa = parseFloat(rawYGPA.tofixed(2));
+  
   let totalMarks = totalSubjects * 100;
 
   let obtainedMarks = (ygpa * totalMarks) / 10;
