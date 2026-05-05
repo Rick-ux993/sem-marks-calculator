@@ -68,16 +68,16 @@ function resetYear() {
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
   let isDark = 
-  document.body.claslist.contains("dark");
-  localstorage.setItem("theme",isDark);
+  document.body.classlist.contains("dark");
+  localStorage.setItem("theme",isDark);
 
 document.getElementById("themeBtn").innerText = 
 isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
 }
 window.onload = function () {
   if (localstorage.getItem("theme") === "true") {
-document.body.classlist.add("dark");
-document.grtElementById("themeBtn").innerText = "☀️ Light Mode";
+document.body.classList.add("dark");
+document.getElementById("themeBtn").innerText = "☀️ Light Mode";
   }
 };
 function predictGrade() {
