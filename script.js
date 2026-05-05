@@ -68,7 +68,7 @@ function resetYear() {
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
   let isDark = 
-  document.body.classlist.contains("dark");
+  document.body.classList.contains("dark");
   localStorage.setItem("theme",isDark);
 
 document.getElementById("themeBtn").innerText = 
